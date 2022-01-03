@@ -11,16 +11,10 @@ using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    [DataContract]
-    [KnownType(typeof(Ellipse))]
-    [KnownType(typeof(Rectangle))]
     class Toilet : IControlElement
     {
-        [DataMember]
         public Ellipse ellipse;
-        [DataMember]
         public Rectangle rectangle;
-        [DataMember]
         int rotationAngle = 0;
         public Toilet(double x, double y)
         {

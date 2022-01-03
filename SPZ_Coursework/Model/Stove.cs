@@ -11,14 +11,9 @@ using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    [DataContract]
-    [KnownType(typeof(Rectangle))]
-    [KnownType(typeof(Ellipse))]
     class Stove : IControlElement
     {
-        [DataMember]
         public Rectangle rectangle;
-        [DataMember]
         public Ellipse ellipse1, ellipse2, ellipse3, ellipse4;
         double offset1, offset2;
         public Stove(double x, double y)

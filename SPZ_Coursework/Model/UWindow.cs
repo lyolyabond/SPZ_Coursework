@@ -11,16 +11,10 @@ using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    [DataContract]
-    [KnownType(typeof(Rectangle))]
-    [KnownType(typeof(Line))]
     class UWindow : IControlElement
     {
-        [DataMember]
         public Rectangle rectangle;
-        [DataMember]
         public Line line1, line2;
-        [DataMember]
         int rotationAngle = 0;
         public UWindow(double width, double x, double y)
         {

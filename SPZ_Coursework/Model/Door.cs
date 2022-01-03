@@ -10,11 +10,8 @@ using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    [DataContract]
-    [KnownType(typeof(Rectangle))]
     class Door : IControlElement
     {
-        [DataMember]
         public Rectangle rectangle { get; set; }
         public Door(double width, double x, double y)
         {

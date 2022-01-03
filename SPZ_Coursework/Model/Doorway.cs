@@ -10,16 +10,11 @@ using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    [DataContract]
-    [KnownType(typeof(Rectangle))]
-    [KnownType(typeof(Line))]
+
     class Doorway : IControlElement
     {
-        [DataMember]
         public Rectangle rectangle;
-        [DataMember]
         public Line line2, line3, line4;
-        [DataMember]
         int rotationAngle = 0;
         public Doorway(double width, double x, double y)
         {

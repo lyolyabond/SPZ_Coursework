@@ -11,11 +11,8 @@ using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    [DataContract]
-    [KnownType(typeof(Line))]
     class Wall 
     {
-        [DataMember]
         public Line line;
         public Wall(Brush brush, double x1, double y1, double x2, double y2)
         {

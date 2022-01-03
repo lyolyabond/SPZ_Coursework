@@ -11,16 +11,10 @@ using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    [DataContract]
-    [KnownType(typeof(Ellipse))]
-    [KnownType(typeof(Line))]
     class Bath : IControlElement
     {
-        [DataMember]
         public Ellipse ellipse;
-        [DataMember]
         public Line line1, line2;
-        [DataMember]
         int rotationAngle = 0;
         public Bath(double x, double y)
         {
