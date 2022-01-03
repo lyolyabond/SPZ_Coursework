@@ -1,0 +1,134 @@
+﻿<Window x:Name="MainWindow1" x:Class="WPFWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFWork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="895.333" Width="1120" Background="#FFEFFFE7"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="0,0,2,-21">
+        <Canvas x:Name="g" Height="859" Margin="0,-5,195,23" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Background="White"  MouseMove="g_MouseMove" MouseLeftButtonDown="g_MouseLeftButtonDown" MouseLeftButtonUp="g_MouseLeftButtonUp"  />
+        <Button x:Name="wall_button" Content="" HorizontalAlignment="Left" Margin="937,13,0,0" VerticalAlignment="Top" Width="158" Height="53" Click="wall_button_Click" RenderTransformOrigin="0.5,0.5" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.407"/>
+                    <TranslateTransform X="-2.181" Y="0.008"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures\kirpichnaya-kladka.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="doorway" Content="" HorizontalAlignment="Left" Height="109" Margin="973,71,0,0" VerticalAlignment="Top" Width="80" Click="doorway_Click" RenderTransformOrigin="0.5,0.5" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.407"/>
+                    <TranslateTransform X="-1.57" Y="0.027"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures\image_.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="windowButton" Content="" HorizontalAlignment="Left" Margin="973,304,0,0" VerticalAlignment="Top" Width="80" Height="103" RenderTransformOrigin="0.773,0.582" Click="windowButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.407"/>
+                    <TranslateTransform X="0.123" Y="-0.134"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures\kisspng-window-drawing-clip-art-5ae0c6bb09ddd5.8444762615246803790404.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="doorButton" Content="" HorizontalAlignment="Left" Margin="973,185,0,0" VerticalAlignment="Top" Width="80" Height="114" RenderTransformOrigin="0.65,0.938" Click="doorButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.407"/>
+                    <TranslateTransform X="-0.388" Y="-0.063"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures\cartoon-door-006.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="stoveButton" Content="" HorizontalAlignment="Left" Margin="973,512,0,0" VerticalAlignment="Top" Width="80" Height="89" Click="stoveButton_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.407"/>
+                    <TranslateTransform X="1.492" Y="0.016"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures\1-2006031350510-L.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="toiletButton" Content="" HorizontalAlignment="Left" Margin="973,412,0,0" VerticalAlignment="Top" Width="80" Height="95" RenderTransformOrigin="-0.441,0.241" Click="toiletButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.407"/>
+                    <TranslateTransform X="0.63" Y="0.554"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures\1-200Q11354480-L.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="bathButton" Content="" HorizontalAlignment="Left" Margin="958,606,0,0" VerticalAlignment="Top" Width="116" Height="74" Click="bathButton_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.407"/>
+                    <TranslateTransform X="2.106" Y="-0.007"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures\vanna-6.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="deleteButton" Margin="1027,703,17,0" VerticalAlignment="Top" Height="55" Click="deleteButton_Click" FontSize="14" FontWeight="Bold" RenderTransformOrigin="1.346,1.2" >
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures/ios12-iphone-x-mail-delete-messages-trash-icon-thumbnail_2x.png" Stretch="UniformToFill"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.104"/>
+                    <TranslateTransform X="-0.069" Y="0.105"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="rotateButton" HorizontalAlignment="Left" Margin="936,702,0,0" VerticalAlignment="Top" Width="72" Height="56" Click="rotateButton_Click" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.444,0.377">
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures/108777.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="saveButton" HorizontalAlignment="Left" Margin="936,772,0,0" VerticalAlignment="Top" Width="72" Click="saveButton_Click" Height="57" FontSize="14" FontWeight="Bold">
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures/unnamed.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="clearButton" HorizontalAlignment="Left" Margin="1024,772,0,0" VerticalAlignment="Top" Width="66" Height="57" Click="clearButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="../Pictures/Cleanpng-Transparent-Images.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
