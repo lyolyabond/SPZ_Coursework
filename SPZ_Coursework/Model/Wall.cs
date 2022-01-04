@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Shapes;
 using System.Windows.Media;
-using System.Windows;
 using System.Windows.Controls;
-using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
-    class Wall 
+    public class Wall 
     {
-        public Line line;
+        public Line line { get; set; }
         public Wall(Brush brush, double x1, double y1, double x2, double y2)
         {
             UserLine userLine = new UserLine(brush, x1, y1, x2, y2);
@@ -53,10 +47,6 @@ namespace WPFWork.Model
                 Y1 = y2;
                 Y2 = y1;
             }
-            /*if (x < X2 + 10 && x > X1 && y < Y2 + 10 && y > Y1)
-            {
-                return this;
-            }*/
             if (Math.Abs(Y1 - Y2) > Math.Abs(X1 - X2))
             {
                 if (x < X2 + 10 && x > X1 && y < Y2 && y > Y1)
@@ -78,7 +68,6 @@ namespace WPFWork.Model
         {
             if (FindItem(x, y) != null)
             {
-                //double width = Math.Abs(line.X2 - x1);
                 UserElipse userElipse = new UserElipse(Brushes.Black, Brushes.Transparent, 12, 12, line.X1 - 5, line.Y1 - 5);
                 ellipse1 = userElipse.ellipse;
                 userElipse = new UserElipse(Brushes.Black, Brushes.Transparent, 12, 12, line.X2 - 7, line.Y2 - 5);

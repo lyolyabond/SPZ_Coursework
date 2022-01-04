@@ -1,20 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFWork.Model;
 using System.IO;
-
 
 
 namespace WPFWork
@@ -115,7 +109,6 @@ namespace WPFWork
         }
         private void g_MouseMove(object sender, MouseEventArgs e)
         {
-           
             if (currentDoor != null)
             {
                 if (e.LeftButton == MouseButtonState.Pressed && dottedRectangle != null)
@@ -715,14 +708,12 @@ namespace WPFWork
             saveimg.Filter = "Image (.PNG)|*.PNG";
             if (saveimg.ShowDialog() == true)
             {
-                ToImageSource(g, saveimg.FileName);  //DragArena  - имя имеющегося канваса
+                ToImageSource(g, saveimg.FileName); 
             }
         }
         private  void ToImageSource(Canvas canvas, string filename)
         {
-            RenderTargetBitmap bmp = new RenderTargetBitmap((int)canvas.ActualWidth, (int)canvas.ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
-            canvas.Measure(new Size((int)canvas.ActualWidth, (int)canvas.ActualHeight));
-            canvas.Arrange(new Rect(new Size((int)canvas.ActualWidth, (int)canvas.ActualHeight)));
+            RenderTargetBitmap bmp = new RenderTargetBitmap((int)canvas.RenderSize.Width, (int)canvas.RenderSize.Height, 96d, 96d, PixelFormats.Default);
             bmp.Render(canvas);
             PngBitmapEncoder encoder = new PngBitmapEncoder();
             encoder.Frames.Add(BitmapFrame.Create(bmp));
@@ -745,37 +736,6 @@ namespace WPFWork
             doorways.Clear();
         }
 
-        /*private void serializeButton_Click(object sender, RoutedEventArgs e)
-        {
-            if(walls.Count > 0)
-             {
-                 serialization.Serialize(pathWall, walls);
-             }
-            if (baths.Count > 0)
-            {
-                serialization.Serialize(pathBath, baths);
-            }
-            if (stoves.Count > 0)
-            {
-                serialization.Serialize(pathStove, stoves);
-            }
-            if (doors.Count > 0)
-            {
-                serialization.Serialize(pathDoor, doors);
-            }
-            if (toilets.Count > 0)
-            {
-                serialization.Serialize(pathToilet, toilets);
-            }
-            if (windows.Count > 0)
-            {
-                serialization.Serialize(pathWindow, windows);
-            }
-            if (doorways.Count > 0)
-            {
-                serialization.Serialize(pathDoorway, doorways);
-            }
-        }*/
     }
 }
 

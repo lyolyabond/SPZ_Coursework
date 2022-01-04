@@ -77,7 +77,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow.xaml.cs" />
+    <Compile Include="View\MainWindow.xaml.cs" />
     <Compile Include="Model\Bath.cs" />
     <Compile Include="Model\Door.cs" />
     <Compile Include="Model\Doorway.cs" />

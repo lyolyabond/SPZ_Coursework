@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Shapes;
+﻿using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Controls;
-using System.Runtime.Serialization;
 
 namespace WPFWork.Model
 {
@@ -129,7 +123,6 @@ namespace WPFWork.Model
         }
         public void Move(double x, double y)
         {
-            
             if (rotationAngle == 0)
             {
                 Canvas.SetLeft(rectangle, x);
